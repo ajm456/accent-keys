@@ -19,7 +19,7 @@ import javax.swing.JFrame;
 class Window extends JFrame
 {
 	Window() {
-		super("FRKeys bootleg edition");
+		super("AccentKeys");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(new GridLayout(1, 9, 20, 5));
 		setResizable(false);
