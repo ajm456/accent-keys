@@ -21,7 +21,7 @@ class Window extends JFrame
 	Window() {
 		super("FRKeys bootleg edition");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setLayout(new GridLayout(2, 6, 20, 5));
+		setLayout(new GridLayout(1, 9, 20, 5));
 		setResizable(false);
 		setFocusableWindowState(false);
 		setAlwaysOnTop(true);
@@ -32,17 +32,14 @@ class Window extends JFrame
 
 	void build() throws AWTException {
 		JButton aAcute = new JButton("á");
-		JButton aAcuteUpper = new JButton("Á");
 		JButton aGrave = new JButton("à");
-		JButton aGraveUpper = new JButton("À");
 		JButton eAcute = new JButton("é");
-		JButton eAcuteUpper = new JButton("É");
 		JButton eGrave = new JButton("è");
-		JButton eGraveUpper = new JButton("È");
-		JButton cCedilla = new JButton("ç");
-		JButton cCedillaUpper = new JButton("Ç");
 		JButton oCircumflex = new JButton("ô");
-		JButton oCircumflexUpper = new JButton("Ô");
+		JButton uAcute = new JButton("ú");
+		JButton uGrave = new JButton("ù");
+		JButton cCedillaUpper = new JButton("Ç");
+		JButton cCedilla = new JButton("ç");
 		
 		Robot robot = new Robot();
 		
@@ -61,21 +58,6 @@ class Window extends JFrame
 				robot.keyRelease(KeyEvent.VK_ALT);
 			}
 		});
-		aAcuteUpper.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				robot.keyPress(KeyEvent.VK_ALT);
-				robot.keyPress(KeyEvent.VK_NUMPAD0);
-				robot.keyRelease(KeyEvent.VK_NUMPAD0);
-				robot.keyPress(KeyEvent.VK_NUMPAD1);
-				robot.keyRelease(KeyEvent.VK_NUMPAD1);
-				robot.keyPress(KeyEvent.VK_NUMPAD9);
-				robot.keyRelease(KeyEvent.VK_NUMPAD9);
-				robot.keyPress(KeyEvent.VK_NUMPAD3);
-				robot.keyRelease(KeyEvent.VK_NUMPAD3);
-				robot.keyRelease(KeyEvent.VK_ALT);
-			}
-		});
 		aGrave.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -88,21 +70,6 @@ class Window extends JFrame
 				robot.keyRelease(KeyEvent.VK_NUMPAD2);
 				robot.keyPress(KeyEvent.VK_NUMPAD4);
 				robot.keyRelease(KeyEvent.VK_NUMPAD4);
-				robot.keyRelease(KeyEvent.VK_ALT);
-			}
-		});
-		aGraveUpper.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				robot.keyPress(KeyEvent.VK_ALT);
-				robot.keyPress(KeyEvent.VK_NUMPAD0);
-				robot.keyRelease(KeyEvent.VK_NUMPAD0);
-				robot.keyPress(KeyEvent.VK_NUMPAD1);
-				robot.keyRelease(KeyEvent.VK_NUMPAD1);
-				robot.keyPress(KeyEvent.VK_NUMPAD9);
-				robot.keyRelease(KeyEvent.VK_NUMPAD9);
-				robot.keyPress(KeyEvent.VK_NUMPAD2);
-				robot.keyRelease(KeyEvent.VK_NUMPAD2);
 				robot.keyRelease(KeyEvent.VK_ALT);
 			}
 		});
@@ -121,21 +88,6 @@ class Window extends JFrame
 				robot.keyRelease(KeyEvent.VK_ALT);
 			}
 		});
-		eAcuteUpper.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				robot.keyPress(KeyEvent.VK_ALT);
-				robot.keyPress(KeyEvent.VK_NUMPAD0);
-				robot.keyRelease(KeyEvent.VK_NUMPAD0);
-				robot.keyPress(KeyEvent.VK_NUMPAD2);
-				robot.keyRelease(KeyEvent.VK_NUMPAD2);
-				robot.keyPress(KeyEvent.VK_NUMPAD0);
-				robot.keyRelease(KeyEvent.VK_NUMPAD0);
-				robot.keyPress(KeyEvent.VK_NUMPAD1);
-				robot.keyRelease(KeyEvent.VK_NUMPAD1);
-				robot.keyRelease(KeyEvent.VK_ALT);
-			}
-		});
 		eGrave.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -148,51 +100,6 @@ class Window extends JFrame
 				robot.keyRelease(KeyEvent.VK_NUMPAD3);
 				robot.keyPress(KeyEvent.VK_NUMPAD2);
 				robot.keyRelease(KeyEvent.VK_NUMPAD2);
-				robot.keyRelease(KeyEvent.VK_ALT);
-			}
-		});
-		eGraveUpper.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				robot.keyPress(KeyEvent.VK_ALT);
-				robot.keyPress(KeyEvent.VK_NUMPAD0);
-				robot.keyRelease(KeyEvent.VK_NUMPAD0);
-				robot.keyPress(KeyEvent.VK_NUMPAD2);
-				robot.keyRelease(KeyEvent.VK_NUMPAD2);
-				robot.keyPress(KeyEvent.VK_NUMPAD0);
-				robot.keyRelease(KeyEvent.VK_NUMPAD0);
-				robot.keyPress(KeyEvent.VK_NUMPAD0);
-				robot.keyRelease(KeyEvent.VK_NUMPAD0);
-				robot.keyRelease(KeyEvent.VK_ALT);
-			}
-		});
-		cCedilla.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				robot.keyPress(KeyEvent.VK_ALT);
-				robot.keyPress(KeyEvent.VK_NUMPAD0);
-				robot.keyRelease(KeyEvent.VK_NUMPAD0);
-				robot.keyPress(KeyEvent.VK_NUMPAD2);
-				robot.keyRelease(KeyEvent.VK_NUMPAD2);
-				robot.keyPress(KeyEvent.VK_NUMPAD3);
-				robot.keyRelease(KeyEvent.VK_NUMPAD3);
-				robot.keyPress(KeyEvent.VK_NUMPAD1);
-				robot.keyRelease(KeyEvent.VK_NUMPAD1);
-				robot.keyRelease(KeyEvent.VK_ALT);
-			}
-		});
-		cCedillaUpper.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				robot.keyPress(KeyEvent.VK_ALT);
-				robot.keyPress(KeyEvent.VK_NUMPAD0);
-				robot.keyRelease(KeyEvent.VK_NUMPAD0);
-				robot.keyPress(KeyEvent.VK_NUMPAD1);
-				robot.keyRelease(KeyEvent.VK_NUMPAD1);
-				robot.keyPress(KeyEvent.VK_NUMPAD9);
-				robot.keyRelease(KeyEvent.VK_NUMPAD9);
-				robot.keyPress(KeyEvent.VK_NUMPAD9);
-				robot.keyRelease(KeyEvent.VK_NUMPAD9);
 				robot.keyRelease(KeyEvent.VK_ALT);
 			}
 		});
@@ -211,7 +118,7 @@ class Window extends JFrame
 				robot.keyRelease(KeyEvent.VK_ALT);
 			}
 		});
-		oCircumflexUpper.addActionListener(new ActionListener() {
+		uAcute.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				robot.keyPress(KeyEvent.VK_ALT);
@@ -219,28 +126,70 @@ class Window extends JFrame
 				robot.keyRelease(KeyEvent.VK_NUMPAD0);
 				robot.keyPress(KeyEvent.VK_NUMPAD2);
 				robot.keyRelease(KeyEvent.VK_NUMPAD2);
-				robot.keyPress(KeyEvent.VK_NUMPAD1);
-				robot.keyRelease(KeyEvent.VK_NUMPAD1);
-				robot.keyPress(KeyEvent.VK_NUMPAD2);
-				robot.keyRelease(KeyEvent.VK_NUMPAD2);
+				robot.keyPress(KeyEvent.VK_NUMPAD5);
+				robot.keyRelease(KeyEvent.VK_NUMPAD5);
+				robot.keyPress(KeyEvent.VK_NUMPAD0);
+				robot.keyRelease(KeyEvent.VK_NUMPAD0);
 				robot.keyRelease(KeyEvent.VK_ALT);
 			}
 		});
+		uGrave.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				robot.keyPress(KeyEvent.VK_ALT);
+				robot.keyPress(KeyEvent.VK_NUMPAD0);
+				robot.keyRelease(KeyEvent.VK_NUMPAD0);
+				robot.keyPress(KeyEvent.VK_NUMPAD2);
+				robot.keyRelease(KeyEvent.VK_NUMPAD2);
+				robot.keyPress(KeyEvent.VK_NUMPAD4);
+				robot.keyRelease(KeyEvent.VK_NUMPAD4);
+				robot.keyPress(KeyEvent.VK_NUMPAD9);
+				robot.keyRelease(KeyEvent.VK_NUMPAD9);
+				robot.keyRelease(KeyEvent.VK_ALT);
+			}
+		});
+		cCedillaUpper.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				robot.keyPress(KeyEvent.VK_ALT);
+				robot.keyPress(KeyEvent.VK_NUMPAD0);
+				robot.keyRelease(KeyEvent.VK_NUMPAD0);
+				robot.keyPress(KeyEvent.VK_NUMPAD1);
+				robot.keyRelease(KeyEvent.VK_NUMPAD1);
+				robot.keyPress(KeyEvent.VK_NUMPAD9);
+				robot.keyRelease(KeyEvent.VK_NUMPAD9);
+				robot.keyPress(KeyEvent.VK_NUMPAD9);
+				robot.keyRelease(KeyEvent.VK_NUMPAD9);
+				robot.keyRelease(KeyEvent.VK_ALT);
+			}
+		});
+		cCedilla.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				robot.keyPress(KeyEvent.VK_ALT);
+				robot.keyPress(KeyEvent.VK_NUMPAD0);
+				robot.keyRelease(KeyEvent.VK_NUMPAD0);
+				robot.keyPress(KeyEvent.VK_NUMPAD2);
+				robot.keyRelease(KeyEvent.VK_NUMPAD2);
+				robot.keyPress(KeyEvent.VK_NUMPAD3);
+				robot.keyRelease(KeyEvent.VK_NUMPAD3);
+				robot.keyPress(KeyEvent.VK_NUMPAD1);
+				robot.keyRelease(KeyEvent.VK_NUMPAD1);
+				robot.keyRelease(KeyEvent.VK_ALT);
+			}
+		});		
 		
 		add(aAcute);
 		add(aGrave);
 		add(eAcute);
 		add(eGrave);
-		add(cCedilla);
 		add(oCircumflex);
-		add(aAcuteUpper);
-		add(aGraveUpper);
-		add(eAcuteUpper);
-		add(eGraveUpper);
+		add(uAcute);
+		add(uGrave);
 		add(cCedillaUpper);
-		add(oCircumflexUpper);
+		add(cCedilla);
 		
-		setSize(new Dimension(500, 100));
+		setSize(new Dimension(630, 70));
 		
 		setVisible(true);
 	}
