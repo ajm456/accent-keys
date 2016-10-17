@@ -1,10 +1,14 @@
+
 package main;
 
 import java.awt.AWTException;
 
 import javax.swing.SwingUtilities;
 
-public class Main
+/**
+ * @author Andrew Matthews
+ */
+class Main
 {
 	public static void main(String[] args) {
 		Window window = new Window();
