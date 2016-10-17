@@ -13,9 +13,9 @@ import java.awt.event.KeyEvent;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-public class Window extends JFrame
+class Window extends JFrame
 {
-	public Window() {
+	Window() {
 		super("FRKeys bootleg edition");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(new GridLayout(2, 6, 20, 5));
@@ -27,7 +27,7 @@ public class Window extends JFrame
 	    setIconImage(icon);
 	}
 
-	public void build() throws AWTException {
+	void build() throws AWTException {
 		JButton aAcute = new JButton("á");
 		JButton aAcuteUpper = new JButton("Á");
 		JButton aGrave = new JButton("à");
